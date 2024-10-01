@@ -1,1 +1,0 @@
-This is the First homework and it is about how to design a shell. 
