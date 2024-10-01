@@ -1,0 +1,35 @@
+#### How to build the Minix 3.3.0 Kernel #### April 18, 2024
+
+#download source files from minix github
+pkgin install git-base
+git clone git://git.minix3.org/minix /usr/src
+git checkout v3.3.0
+
+#All kernel files are located in /usr/src/minix/kernel
+
+#Build kernel
+cd /usr/src/minix
+make clean
+cd /usr/src/minix/kernel
+make clean
+make kernel
+make install
+cp /usr/sbin/kernel /boot/minix_latest/kernel
+reboot
+# Select default, 2.  Use latest minix selection
+
+
+Tip:
+1) modify /usr/src/minix/include/minix/config.h to identify kernel as custom
+2) if you run "make includes", all includes are moved to "/usr/include" for compile
+2a) As an alternative, you can run "cp /usr/src/minix/include/minix/config.h /usr/include/minix/config.h" 
+---> (kernel builds using /usr/include)
+---> Custom banner will display at boot, this is not the same as uname.  The only define that seems to appear is OS_RELEASE  
+------
+
+#reference:
+1) https://gist.github.com/diogofurtado/e134558d0c818cd385f635a415bfec10
+2) https://web.ecs.syr.edu/~wedu/seed/Labs/Lab_Setup/files/WorkingInMinix.pdf
+3) https://groups.google.com/g/minix3/c/4iO74GI4KBk
+
+

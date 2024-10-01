@@ -1,11 +1,9 @@
-This assignment is contributed only by myself. (There is only one person, me, in this team.)
+This assignment is contributed by B104020046單業儒 (only myself).
 
-How to execute the program:
-clang shell.c -o shell
-./shell
+There is another file called "longrun.c" in the directory. I use this file to show the high usage of CPU.
 
-Special case:
-If you input "cd" without any argument or "cd ~", 
-the program will change the directory to the $HOME (In my environment, it will change to "/root").
+There are two files in this directory called "proc.c" and "proc.h". In these two files, 
+you can type "Lottery Scheduling" to find where I have modified. 
 
-When you input "ls &", which has the symbol "&" at the end, the program will wait until you press the enter again.
+There are more details in my design document called "Design_Doc". 
+
